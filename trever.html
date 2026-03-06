@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>트레버(TREVER) | 도쿄 미식 여행 가이드</title>
+    <!-- Tailwind CSS for modern styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700;900&display=swap');
+        
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            scroll-behavior: smooth;
+        }
+        
+        .hero-section {
+            /* 도쿄 야경 고화질 이미지 */
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://github.com/yew101101-lab/digital_card/blob/main/Gemini_Generated_Image_ii0ap2ii0ap2ii0a.png?raw=true');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .blur-nav {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+        }
+
+        .food-card:hover img {
+            transform: scale(1.05);
+        }
+
+        /* 로고가 메뉴를 밀지 않도록 크기 제한 */
+        .nav-logo {
+            height: 32px; /* 네비게이션 바 높이에 맞춰 조절 */
+            width: auto;
+            object-fit: contain;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-gray-900">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 blur-nav border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+            <!-- 로고 영역: flex-shrink-0을 추가하여 메뉴를 밀어내지 않게 보호 -->
+            <div class="flex items-center gap-3 flex-shrink-0">
+                <!-- 실제 이미지 로고 삽입 부분 -->
+                <!-- 여기에 실제 로고 이미지 주소를 넣으세요. 예: src="logo.png" -->
+                <img src="https://github.com/yew101101-lab/digital_card/blob/main/Gemini_Generated_Image_itzc35itzc35itzc.png?raw=true" alt="TREVER Logo" class="nav-logo">
+                <span class="font-black text-2xl tracking-tighter text-slate-900">TREVER</span>
+            </div>
+
+            <!-- 메뉴 영역: hidden md:flex로 반응형 유지 -->
+            <div class="hidden md:flex space-x-8 font-bold text-sm text-slate-600">
+                <a href="#" class="hover:text-blue-600 transition">홈</a>
+                <a href="#schedule" class="hover:text-blue-600 transition">추천 일정</a>
+                <a href="#" class="hover:text-blue-600 transition">맛집 지도</a>
+                <a href="#" class="hover:text-blue-600 transition">가이드 소개</a>
+            </div>
+
+            <!-- 버튼 영역: flex-shrink-0 추가 -->
+            <div class="flex-shrink-0">
+                <button class="bg-slate-900 text-white px-6 py-2 rounded-full text-sm font-bold hover:bg-blue-700 transition shadow-lg shadow-slate-200">
+                    상담 문의
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative">
+        <div class="hero-section min-h-[70vh] w-full flex items-center justify-center px-6">
+            <div class="text-center text-white max-w-3xl">
+                <div class="inline-flex items-center gap-2 px-4 py-2 bg-blue-600 rounded-full text-xs font-bold mb-6 tracking-widest uppercase shadow-xl">
+                    <span>10 Years Professional Guide</span>
+                </div>
+                <h1 class="text-5xl md:text-7xl font-black mb-6 drop-shadow-2xl leading-tight">당신의 매일이<br>여행이 되도록</h1>
+                <p class="text-xl md:text-2xl font-light opacity-95 mb-10 leading-relaxed">트레버가 직접 발로 뛰어 찾은<br class="md:hidden"> 도쿄의 숨은 맛과 멋을 소개합니다.</p>
+                <div class="flex flex-col md:flex-row gap-4 justify-center">
+                    <a href="#schedule" class="bg-white text-slate-900 px-10 py-4 rounded-full font-bold shadow-2xl hover:bg-blue-50 transition-all inline-block text-lg">
+                        일정 확인하기
+                    </a>
+                    <a href="#" class="bg-transparent border-2 border-white/50 backdrop-blur-sm text-white px-10 py-4 rounded-full font-bold hover:bg-white/10 transition-all inline-block text-lg">
+                        맛집 지도 보기
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Content Intro -->
+    <section class="max-w-7xl mx-auto py-24 px-6 grid md:grid-cols-2 gap-16 items-center">
+        <div>
+            <h2 class="text-4xl font-black text-slate-900 mb-6 leading-tight">단 1박 2일,<br><span class="text-blue-600">도쿄의 정수</span>만을 담았습니다.</h2>
+            <p class="text-gray-600 text-lg leading-relaxed mb-8">
+                10년 차 베테랑 가이드의 노하우로 줄 서는 맛집부터 현지인들만 아는 골목길까지, 
+                시간 낭비 없는 완벽한 동선을 제안합니다. 복잡한 도쿄 여행, 트레버가 가장 쉽고 맛있게 정리해 드립니다.
+            </p>
+            <div class="grid grid-cols-2 gap-6">
+                <div class="p-4 bg-white rounded-2xl shadow-sm border border-gray-100">
+                    <p class="text-2xl font-black text-blue-600 mb-1">100+</p>
+                    <p class="text-sm font-bold text-gray-500 uppercase">Verified Spots</p>
+                </div>
+                <div class="p-4 bg-white rounded-2xl shadow-sm border border-gray-100">
+                    <p class="text-2xl font-black text-blue-600 mb-1">10yr</p>
+                    <p class="text-sm font-bold text-gray-500 uppercase">Local Expertise</p>
+                </div>
+            </div>
+        </div>
+        <div class="relative rounded-[2rem] overflow-hidden shadow-2xl food-card h-[400px]">
+            <img src="https://images.unsplash.com/photo-1569718212165-3a8278d5f624?q=80&w=2080&auto=format&fit=crop" alt="Tokyo Gastronomy" class="w-full h-full object-cover transition-transform duration-700">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent flex items-end p-8">
+                <p class="text-white font-bold text-xl">현지인들이 추천하는 진짜 도쿄의 맛</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Schedule Section -->
+    <section id="schedule" class="bg-slate-100 py-24">
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-black text-slate-900 mb-4">🗓️ 도쿄 미식 추천 코스</h2>
+                <div class="h-1.5 w-20 bg-blue-600 mx-auto rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                <!-- Day 1 -->
+                <div class="bg-white rounded-[2.5rem] overflow-hidden shadow-xl shadow-slate-200 transition hover:-translate-y-2 duration-300">
+                    <div class="bg-blue-600 p-8 text-white">
+                        <p class="text-sm font-bold opacity-80 mb-1 uppercase tracking-widest text-blue-100">Day 01</p>
+                        <h3 class="text-2xl font-black">시타마치와 긴자의 정취</h3>
+                    </div>
+                    <div class="p-8 space-y-8 relative">
+                        <div class="absolute left-10 top-10 bottom-10 w-0.5 bg-slate-100"></div>
+                        <div class="relative flex gap-6">
+                            <div class="z-10 w-4 h-4 rounded-full bg-blue-600 border-4 border-white shadow-sm mt-1"></div>
+                            <div>
+                                <p class="text-xs font-bold text-blue-600 mb-1">10:00 AM</p>
+                                <h4 class="font-bold text-slate-900">센소지 & 나카미세 거리</h4>
+                                <p class="text-sm text-gray-500">도쿄의 전통이 살아있는 아침 산책</p>
+                            </div>
+                        </div>
+                        <div class="relative flex gap-6">
+                            <div class="z-10 w-4 h-4 rounded-full bg-orange-500 border-4 border-white shadow-sm mt-1"></div>
+                            <div class="bg-orange-50 p-4 rounded-2xl w-full border border-orange-100">
+                                <p class="text-xs font-bold text-orange-600 mb-1">12:30 PM (LUNCH)</p>
+                                <h4 class="font-bold text-orange-950">고다이메 하나야마 우동</h4>
+                                <p class="text-sm text-orange-800/70 italic">가이드 팁: 5cm 넓이의 히모카와 우동 필수</p>
+                            </div>
+                        </div>
+                        <div class="relative flex gap-6">
+                            <div class="z-10 w-4 h-4 rounded-full bg-blue-600 border-4 border-white shadow-sm mt-1"></div>
+                            <div>
+                                <p class="text-xs font-bold text-blue-600 mb-1">14:30 PM</p>
+                                <h4 class="font-bold text-slate-900">네즈 신사</h4>
+                                <p class="text-sm text-gray-500">도심 속 숨겨진 신비로운 토리이 길</p>
+                            </div>
+                        </div>
+                        <div class="relative flex gap-6">
+                            <div class="z-10 w-4 h-4 rounded-full bg-orange-500 border-4 border-white shadow-sm mt-1"></div>
+                            <div class="bg-orange-50 p-4 rounded-2xl w-full border border-orange-100">
+                                <p class="text-xs font-bold text-orange-600 mb-1">18:00 PM (DINNER)</p>
+                                <h4 class="font-bold text-orange-950">야키토리 '타카하시'</h4>
+                                <p class="text-sm text-orange-800/70 italic">긴자의 밤을 여는 고품격 야키토리 코스</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Day 2 -->
+                <div class="bg-white rounded-[2.5rem] overflow-hidden shadow-xl shadow-slate-200 transition hover:-translate-y-2 duration-300">
+                    <div class="bg-slate-900 p-8 text-white">
+                        <p class="text-sm font-bold opacity-80 mb-1 uppercase tracking-widest text-slate-400">Day 02</p>
+                        <h3 class="text-2xl font-black">도쿄의 모던 감성 투어</h3>
+                    </div>
+                    <div class="p-8 space-y-8 relative">
+                        <div class="absolute left-10 top-10 bottom-10 w-0.5 bg-slate-100"></div>
+                        <div class="relative flex gap-6">
+                            <div class="z-10 w-4 h-4 rounded-full bg-slate-900 border-4 border-white shadow-sm mt-1"></div>
+                            <div>
+                                <p class="text-xs font-bold text-slate-500 mb-1">09:30 AM</p>
+                                <h4 class="font-bold text-slate-900">신주쿠 교엔</h4>
+                                <p class="text-sm text-gray-500">상쾌한 공기와 정원 산책으로 시작</p>
+                            </div>
+                        </div>
+                        <div class="relative flex gap-6">
+                            <div class="z-10 w-4 h-4 rounded-full bg-orange-500 border-4 border-white shadow-sm mt-1"></div>
+                            <div class="bg-orange-50 p-4 rounded-2xl w-full border border-orange-100">
+                                <p class="text-xs font-bold text-orange-600 mb-1">12:00 PM (LUNCH)</p>
+                                <h4 class="font-bold text-orange-950">이마카츠 롯폰기 본점</h4>
+                                <p class="text-sm text-orange-800/70 italic">입에서 녹는 사사미 카츠의 원조</p>
+                            </div>
+                        </div>
+                        <div class="relative flex gap-6">
+                            <div class="z-10 w-4 h-4 rounded-full bg-slate-900 border-4 border-white shadow-sm mt-1"></div>
+                            <div>
+                                <p class="text-xs font-bold text-slate-500 mb-1">14:00 PM</p>
+                                <h4 class="font-bold text-slate-900">시부야 스카이 & 푸글렌</h4>
+                                <p class="text-sm text-gray-500">최고의 조망과 북유럽 감성 커피의 만남</p>
+                            </div>
+                        </div>
+                        <div class="relative flex gap-6">
+                            <div class="z-10 w-4 h-4 rounded-full bg-orange-500 border-4 border-white shadow-sm mt-1"></div>
+                            <div class="bg-orange-50 p-4 rounded-2xl w-full border border-orange-100">
+                                <p class="text-xs font-bold text-orange-600 mb-1">18:30 PM (DINNER)</p>
+                                <h4 class="font-bold text-orange-950">조몬 롯폰기점</h4>
+                                <p class="text-sm text-orange-800/70 italic">활기찬 이자카야에서 여행의 피로를 해소</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-white py-24 px-6 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto flex flex-col items-center">
+            <div class="flex items-center gap-3 mb-8">
+                <!-- 푸터 로고도 이미지로 교체 가능 -->
+                <img src="https://github.com/yew101101-lab/digital_card/blob/main/Gemini_Generated_Image_ii0ap2ii0ap2ii0a.png?raw=true" alt="TREVER Logo" class="h-8 brightness-0 invert">
+                <span class="font-black text-3xl tracking-tighter">TREVER</span>
+            </div>
+            <p class="text-slate-400 text-center max-w-lg mb-12 text-lg leading-relaxed">
+                "당신의 매일이 여행이 되도록"<br>
+                10년 차 가이드의 진심이 담긴 맞춤 여행 큐레이션,<br>
+                트레버와 함께 진짜 도쿄를 만나보세요.
+            </p>
+            <div class="flex gap-10 mb-16 text-sm font-bold uppercase tracking-widest text-slate-500">
+                <a href="#" class="hover:text-white transition">Instagram</a>
+                <a href="#" class="hover:text-white transition">Youtube</a>
+                <a href="#" class="hover:text-white transition">KakaoTalk</a>
+            </div>
+            <p class="text-xs text-slate-600">&copy; 2026 TREVER Travel Service. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
